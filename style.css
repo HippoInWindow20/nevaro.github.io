@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
     border-radius: 0;
@@ -13,19 +13,66 @@
     position: relative;
     text-transform: none;
     width: 400px;
+    position: absolute;
+    left: -400px;
+    z-index: 999;
+    border: none;
 }
+
 .navbarButton {
-    background-color: #333333;
-    border-color: #e7e7e7;
+    background-color: #f8f8f8;
+    border: none;
     border-radius: 0;
-    border-width: 0 0 1px;
     box-shadow: none;
     font-size: 14px;
     font-weight: 400;
     margin: 0;
     min-height: 40px;
-    padding: 0;
+    padding: 30px 0px;
     position: relative;
     text-transform: none;
-    width: 100%;
+    width: 90%;
+    border-radius: 0 20px 20px 0 ;
+}
+
+.navbarButton:hover {
+    background-color: #f5f5f5;
+}
+
+.navbarButton:active{
+    color: #1a73e8;
+    background-color: #e8f0fe;
+}
+
+.header {
+    width: 100vw;
+    position: absolute;
+    background: white;
+    backdrop-filter: blur(8px);
+    left: 0;
+    top: 0;
+    height: 80px;
+    box-shadow: 0px 5px 15px 0px #ccc;
+}
+
+.menuicon {
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    display: none;
+    opacity: 0;
 }
