@@ -29,7 +29,7 @@ function closeNavbar() {
     document.body.style.overflow = "auto";
 }
 
-function switchPages(comp) {
+function switchPages(comp, compitself) {
     switch (comp) {
         case "Reminders":
             document.getElementById("frame").src = "component/reminders.html";
@@ -40,6 +40,14 @@ function switchPages(comp) {
         default:
             document.getElementById("frame").src = "component/404.html";
     }
+    var navbarButtons1 = document.getElementsByClassName("navbarButton");
+    for (var j = 0; j < navbarButtons.length; j++) {
+        navbarButtons1[j].classList = "navbarButton";
+    }
+    compitself.classList.add("active");
+    // console.log(compitself);
+    closeNavbar();
+    document.getElementById("title").innerText = comp;
 }
 
 document.getElementById("menuicon").addEventListener("click", openNavbar);
@@ -48,5 +56,7 @@ document.getElementById("closeBtn").addEventListener("click", closeNavbar);
 
 var navbarButtons = document.getElementsByClassName("navbarButton");
 for (var i = 0; i < navbarButtons.length; i++) {
-    navbarButtons[i].onclick = switchPages(navbarButtons[i].innerHTML);
+    navbarButtons[i].addEventListener("click", function() {
+        switchPages(this.innerText, this);
+    });
 }
