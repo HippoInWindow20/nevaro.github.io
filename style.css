@@ -1,217 +1,231 @@
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('font/PlusJakartaSans-Light.woff');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('font/PlusJakartaSans-Regular.woff');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('font/PlusJakartaSans-Medium.woff');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('font/PlusJakartaSans-Bold.woff');
-    font-weight: 700;
-}
-
-body {
-    font-family: 'PlusJakartaSans', "Microsoft JhengHei UI", "微軟正黑體", -apple-system, sans-serif;
-}
-
-.navbar {
-    background-color: #f8f8f8;
-    border-color: #e7e7e7;
-    border-radius: 0;
-    border-width: 0 0 1px;
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: 400;
-    height: 100vh;
-    margin: 0;
-    min-height: 40px;
-    padding: 0;
-    position: relative;
-    text-transform: none;
-    width: 400px;
-    position: absolute;
-    left: -400px;
-    z-index: 999;
-    border: none;
-    top: 0;
-    overflow-y: auto;
-}
-
-.navbarButton {
-    background-color: #f8f8f8;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 5px 0;
-    min-height: 40px;
-    padding: 15px 0px;
-    position: relative;
-    text-transform: none;
-    width: 90%;
-    border-radius: 0 50px 50px 0;
-    /* border: 1px solid black; */
-    transition: 0.1s;
-    cursor: pointer;
-    text-align: left;
-    font-weight: 400;
-}
-
-.navbarButton:hover {
-    background-color: #f5f5f5;
-    box-shadow: none;
-}
-
-.navbarButton:active {
-    color: #1a73e8;
-    background-color: #e8f0fe;
-    box-shadow: none;
-    font-weight: 400;
-}
-
-.navbarButton>img.blue {
-    display: none;
-}
-
-.navbarButton>img.black {
-    display: inline-block;
-}
-
-.navbarButton:active>img.blue {
+        @font-face {
+            font-family: 'PlusJakartaSans';
+            src: url('font/PlusJakartaSans-Light.woff');
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: 'PlusJakartaSans';
+            src: url('font/PlusJakartaSans-Regular.woff');
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: 'PlusJakartaSans';
+            src: url('font/PlusJakartaSans-Medium.woff');
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: 'PlusJakartaSans';
+            src: url('font/PlusJakartaSans-Bold.woff');
+            font-weight: 700;
+        }
+        
+        body {
+            font-family: 'PlusJakartaSans', "Microsoft JhengHei UI", "微軟正黑體", -apple-system, sans-serif;
+            overflow: hidden;
+        }
+        
+        .navbar {
+            background-color: #f8f8f8;
+            border-color: #e7e7e7;
+            border-radius: 0;
+            border-width: 0 0 1px;
+            box-shadow: none;
+            font-size: 14px;
+            font-weight: 400;
+            height: 100vh;
+            margin: 0;
+            min-height: 40px;
+            padding: 0;
+            position: relative;
+            text-transform: none;
+            width: 400px;
+            position: absolute;
+            left: -400px;
+            z-index: 999;
+            border: none;
+            top: 0;
+            overflow-y: auto;
+        }
+        
+        .navbarButton {
+            background-color: #f8f8f8;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 5px 0;
+            min-height: 40px;
+            padding: 15px 0px;
+            position: relative;
+            text-transform: none;
+            width: 90%;
+            border-radius: 0 50px 50px 0;
+            /* border: 1px solid black; */
+            transition: 0.1s;
+            cursor: pointer;
+            text-align: left;
+            font-weight: 400;
+        }
+        
+        .navbarButton:hover {
+            background-color: #f0f0f0;
+            box-shadow: none;
+        }
+        
+        .navbarButton:active {
+            /* color: #1a73e8; */
+            color: #474747;
+            background-color: #cecece;
+            box-shadow: none;
+            font-weight: 400;
+        }
+        
+        .navbarButton>img.blue {
+            display: none;
+        }
+        
+        .navbarButton>img.black {
+            display: inline-block;
+        }
+        /* .navbarButton:active>img.blue {
     display: inline-block;
 }
 
 .navbarButton:active>img.black {
     display: none;
-}
-
-.active {
-    color: #1a73e8;
-    background-color: #e8f0fe;
-    box-shadow: none;
-    font-weight: 700;
-}
-
-.active:hover {
-    color: #1a73e8;
-    background-color: #e8f0fe;
-    font-weight: 700;
-    box-shadow: 0px 4px 2px 0px #ccc;
-}
-
-.active:active {
-    color: #1662c5;
-    background-color: #c5daff;
-    font-weight: 700;
-    box-shadow: 0px 5px 4px 0px #ccc;
-}
-
-.active>img.blue {
-    display: inline-block;
-}
-
-.active>img.black {
-    display: none;
-}
-
-.header {
-    width: 100vw;
-    position: absolute;
-    background: white;
-    backdrop-filter: blur(8px);
-    left: 0;
-    top: 0;
-    height: 80px;
-    box-shadow: 0px 5px 15px 0px #ccc;
-}
-
-.menuicon {
-    height: 30px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: 0.2s;
-}
-
-.menuicon:hover {
-    background: #eee;
-}
-
-.menuicon:active {
-    background: #ccc;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 998;
-    display: none;
-    opacity: 0;
-}
-
-.transparentButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    padding: 15px 15px;
-}
-
-.materialsvg {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-radius: 50%;
-    transition: 0.2s;
-}
-
-.materialsvg:hover {
-    background: #eee;
-}
-
-.materialsvg:active {
-    background: #ccc;
-}
-
-.menusvg {
-    width: 30px;
-    height: 30px;
-    padding: 2px 24px;
-    vertical-align: middle;
-}
-
-.menuText {
-    font-size: 20px;
-    font-weight: 400;
-    color: inherit;
-    text-transform: none;
-    padding: 0;
-    margin-top: 0;
-    text-align: left;
-    vertical-align: middle;
-    font-family: PlusJakartaSans, "Microsoft JhengHei UI", "微軟正黑體", -apple-system, sans-serif;
-    font-weight: inherit;
-}
+} */
+        
+        .active {
+            color: #1a73e8;
+            background-color: #e8f0fe;
+            box-shadow: none;
+            font-weight: 700;
+        }
+        
+        .active:hover {
+            color: #1a73e8;
+            background-color: #e8f0fe;
+            font-weight: 700;
+            box-shadow: 0px 4px 2px 0px #ccc;
+        }
+        
+        .active:active {
+            color: #1662c5;
+            background-color: #c5daff;
+            font-weight: 700;
+            box-shadow: 0px 5px 4px 0px #ccc;
+        }
+        
+        .active>img.blue {
+            display: inline-block;
+        }
+        
+        .active>img.black {
+            display: none;
+        }
+        
+        .header {
+            width: 100vw;
+            position: absolute;
+            background: white;
+            backdrop-filter: blur(8px);
+            left: 0;
+            top: 0;
+            height: 80px;
+            box-shadow: 0px 5px 15px 0px #ccc;
+            z-index: 997;
+        }
+        
+        .menuicon {
+            height: 30px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        
+        .menuicon:hover {
+            background: #eee;
+        }
+        
+        .menuicon:active {
+            background: #ccc;
+        }
+        
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 998;
+            display: none;
+            opacity: 0;
+        }
+        
+        .transparentButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            padding: 15px 15px;
+        }
+        
+        .materialsvg {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        
+        .materialsvg:hover {
+            background: #eee;
+        }
+        
+        .materialsvg:active {
+            background: #ccc;
+        }
+        
+        .menusvg {
+            width: 30px;
+            height: 30px;
+            padding: 2px 24px;
+            vertical-align: middle;
+        }
+        
+        .menuText {
+            font-size: 20px;
+            font-weight: 400;
+            color: inherit;
+            text-transform: none;
+            padding: 0;
+            margin-top: 0;
+            text-align: left;
+            vertical-align: middle;
+            font-family: PlusJakartaSans, "Microsoft JhengHei UI", "微軟正黑體", -apple-system, sans-serif;
+            font-weight: inherit;
+        }
+        
+        .frame {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh - 80px);
+            border: none;
+            z-index: 996;
+            background: white;
+            overflow: auto;
+        }

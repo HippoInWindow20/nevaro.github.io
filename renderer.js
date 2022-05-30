@@ -29,6 +29,24 @@ function closeNavbar() {
     document.body.style.overflow = "auto";
 }
 
+function switchPages(comp) {
+    switch (comp) {
+        case "Reminders":
+            document.getElementById("frame").src = "component/reminders.html";
+            break;
+        case "Calendar":
+            document.getElementById("frame").src = "component/calendar.html";
+            break;
+        default:
+            document.getElementById("frame").src = "component/404.html";
+    }
+}
+
 document.getElementById("menuicon").addEventListener("click", openNavbar);
 document.getElementById("overlay").addEventListener("click", closeNavbar);
 document.getElementById("closeBtn").addEventListener("click", closeNavbar);
+
+var navbarButtons = document.getElementsByClassName("navbarButton");
+for (var i = 0; i < navbarButtons.length; i++) {
+    navbarButtons[i].onclick = switchPages(navbarButtons[i].innerHTML);
+}
