@@ -60,3 +60,8 @@ for (var i = 0; i < navbarButtons.length; i++) {
         switchPages(this.innerText, this);
     });
 }
+
+var y = document.getElementsByTagName("img");
+for (var i = 0; i < y.length; i++) {
+    y[i].draggable = false;
+}
