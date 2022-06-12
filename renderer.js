@@ -1,9 +1,9 @@
-const NOTIFICATION_TITLE = 'Title'
-const NOTIFICATION_BODY = 'Notification from the Renderer process. Click to log to console.'
-const CLICK_MESSAGE = 'Notification clicked!'
+// const NOTIFICATION_TITLE = 'Title'
+// const NOTIFICATION_BODY = 'Notification from the Renderer process. Click to log to console.'
+// const CLICK_MESSAGE = 'Notification clicked!'
 
-new Notification(NOTIFICATION_TITLE, { body: NOTIFICATION_BODY })
-    .onclick = () => document.getElementById("output").innerText = CLICK_MESSAGE
+// new Notification(NOTIFICATION_TITLE, { body: NOTIFICATION_BODY })
+//     .onclick = () => document.getElementById("output").innerText = CLICK_MESSAGE
 
 
 function openNavbar() {
@@ -30,22 +30,19 @@ function closeNavbar() {
 }
 
 function switchPages(comp, compitself) {
-    switch (comp) {
-        case "Reminders":
-            document.getElementById("frame").src = "component/reminders.html";
-            break;
-        case "Calendar":
-            document.getElementById("frame").src = "component/calendar.html";
-            break;
-        default:
-            document.getElementById("frame").src = "component/404.html";
-    }
+    if (comp.includes("Reminders"))
+        document.getElementById("frame").src = "component/reminders.html";
+    else if (comp.includes("Calendar"))
+        document.getElementById("frame").src = "component/calendar.html";
+    else
+        document.getElementById("frame").src = "component/404.html";
+
     var navbarButtons1 = document.getElementsByClassName("navbarButton");
     for (var j = 0; j < navbarButtons.length; j++) {
         navbarButtons1[j].classList = "navbarButton";
     }
     compitself.classList.add("active");
-    // console.log(compitself);
+    console.log(comp);
     closeNavbar();
     document.getElementById("title").innerText = comp;
 }
